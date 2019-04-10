@@ -1,5 +1,14 @@
 #include "cupomdesconto.h"
 
+int CupomDesconto::getID() const
+{
+    return id;
+}
+
+void CupomDesconto::setID(const int &value){
+    id = value;
+}
+
 CupomTipo CupomDesconto::getTipo() const
 {
     return tipo;
@@ -29,6 +38,7 @@ void CupomDesconto::setDesconto(const float &value){
 
 void CupomDesconto::imprimir()
 {
+    cout<<"\n ID:\t"<<this->getID();
     cout<<"\n Tipo:\t"<<this->getTipo();
     cout<<"\n Aspecto:\t"<<this->getAspecto();
     cout<<"\n Desconto:\t"<<this->getDesconto();
@@ -43,8 +53,8 @@ CupomDesconto::CupomDesconto()
 
 }
 
-CupomDesconto::CupomDesconto(CupomTipo tipo, CupomAspecto aspecto, float desconto)
-    :tipo(tipo), aspecto(aspecto), desconto(desconto)
+CupomDesconto::CupomDesconto(int id, CupomTipo tipo, CupomAspecto aspecto, float desconto)
+    :id(id),tipo(tipo), aspecto(aspecto), desconto(desconto)
 {
 
 }

@@ -9,13 +9,16 @@ enum CupomAspecto {Absoluto, Relativo};
 class CupomDesconto
 {
 private:
+    int id;
     CupomTipo tipo;
     CupomAspecto aspecto;
     float desconto;
 
 public:
     CupomDesconto();
-    CupomDesconto(CupomTipo tipo, CupomAspecto aspecto, float desconto);
+    CupomDesconto(int id, CupomTipo tipo, CupomAspecto aspecto, float desconto);
+    int getID() const;
+    void setID(const int &value);
     CupomTipo getTipo() const;
     void setTipo(const CupomTipo &value);
     CupomAspecto getAspecto() const;

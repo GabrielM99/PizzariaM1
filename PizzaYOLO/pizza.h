@@ -2,9 +2,9 @@
 #define PIZZA_H
 #include "item.h"
 #include "borda.h"
+
 enum TamanhosPizza {Pequena, Media, Grande, Familia, Gigante};
 enum SaboresPizza{Calabresa, QuatroQueijos, Marquerita, Mussarela, AlhoOlho};
-
 
 class Pizza: public  Borda, public Item
 {
@@ -12,6 +12,7 @@ private:
     TamanhosPizza tamanho;
     int qtdSabores;
     SaboresPizza saborP;
+    Borda borda;
 
 public:
     Pizza();
